@@ -168,4 +168,4 @@ Below we visualize the two-dimensional discriminant subspace calculated by the l
 
 ![Visualization of the LDA subspace calculated from the original space and the CDT space.](Figures/figure4.png)
 
-It can be clearly seen that while the classes are not linearly separable in the original space, the CDT representations of the signals is linearly separable.
+It can be clearly seen that while the classes are not linearly separable in the original space, the Radon-CDT representations of the image are linearly separable.
