@@ -25,95 +25,75 @@ Here we first walk you through the formulation of CDT and Radon transform and th
 
 ### Cumulative Distribution Transform (CDT)
 
-Consider two nonnegative one-dimensional signals $I_0$ and $I$ defined on $X,Y\subset\mathbb{R}$. Without the loss of generality assume that these signals are normalized so that they could be treated as probability density functions (PDFs). Considering $I_0$ to be a pre-determined 'template'/'reference' PDF, and following the definition of the **optimal mass transportation**  for one-dimensional distributions, one can define the optimal transport map, $f:X \rightarrow Y$ using,
+Consider two nonnegative one-dimensional signals <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/88fbd05154e7d6a65883f20e1b18a817.svg?invert_in_darkmode" align=middle width=13.727175pt height=22.38192pt/> and <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/21fd4e8eecd6bdf1a4d3d6bd1fb8d733.svg?invert_in_darkmode" align=middle width=8.4843pt height=22.38192pt/> defined on <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/82289f06c71b94420b624654501ad06e.svg?invert_in_darkmode" align=middle width=68.09187pt height=22.56408pt/>. Without the loss of generality assume that these signals are normalized so that they could be treated as probability density functions (PDFs). Considering <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/88fbd05154e7d6a65883f20e1b18a817.svg?invert_in_darkmode" align=middle width=13.727175pt height=22.38192pt/> to be a pre-determined 'template'/'reference' PDF, and following the definition of the **optimal mass transportation**  for one-dimensional distributions, one can define the optimal transport map, <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/a4fe1ef6edd893e70831c6cf216f5ec3.svg?invert_in_darkmode" align=middle width=76.982895pt height=22.74591pt/> using,
 
-$$
-\int_{inf(Y)}^{f(x)} I(\tau) d\tau=\int_{inf(X)}^{x}I_0(\tau)d\tau
-$$
+<p align="center"><img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/0cbe82a78bb845208169052fcd22e3d1.svg?invert_in_darkmode" align=middle width=232.65165pt height=44.75196pt/></p>
 
-which uniquely associates $f:X\rightarrow Y$ to the given density $I$.
+which uniquely associates <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/7211ec64117b386a4d281f03e816f84c.svg?invert_in_darkmode" align=middle width=76.982895pt height=22.74591pt/> to the given density <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/21fd4e8eecd6bdf1a4d3d6bd1fb8d733.svg?invert_in_darkmode" align=middle width=8.4843pt height=22.38192pt/>.
 
 ###### Forward Transform:
-We use this relationship to define the ** Cumulative Distribution Transform (CDT)** of $I$ (denoted as $\hat{I}: X \to \mathbb{R}$), with respect to the reference $I_0$:
+We use this relationship to define the ** Cumulative Distribution Transform (CDT)** of <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/21fd4e8eecd6bdf1a4d3d6bd1fb8d733.svg?invert_in_darkmode" align=middle width=8.4843pt height=22.38192pt/> (denoted as <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/009c5c6e872cda936558aa1391e2980a.svg?invert_in_darkmode" align=middle width=74.39223pt height=31.0563pt/>), with respect to the reference <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/88fbd05154e7d6a65883f20e1b18a817.svg?invert_in_darkmode" align=middle width=13.727175pt height=22.38192pt/>:
 
-$$
-\hat{I}(x) = \left(  f(x) - x \right) \sqrt{I_0(x)}.
-$$
+<p align="center"><img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/1efb47898a7c14b03e4b8d53cc237304.svg?invert_in_darkmode" align=middle width=187.26015pt height=19.668165pt/></p>
 
-For one-dimensional PDFs the transport map $f$ is uniquely defined, and can be calculated from:
+For one-dimensional PDFs the transport map <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/190083ef7a1625fbc75f243cffb9c96d.svg?invert_in_darkmode" align=middle width=9.780705pt height=22.74591pt/> is uniquely defined, and can be calculated from:
 
-$$
-f(x)=J^{-1}(J_0(x)).
-$$
+<p align="center"><img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/f568e3bda301c41784ffdc1e1bda6086.svg?invert_in_darkmode" align=middle width=137.90568pt height=18.269295pt/></p>
 
-where $J_0: X \to [0,1]$ and $J: Y \to [0,1]$ are the corresponding cumulative distribution functions (CDFs) for ${I}_0$ and $I$, that is: $J_0(x) = \int_{\inf(X)}^x I_0(\tau) d\tau$, $J(y) = \int_{\inf(Y)}^y I(\tau) d\tau$. For continuous positive PDFs $I_0$ and $I$, $f$ is a continuous and monotonically increasing function. If $f$ is differentiable, we can rewrite the above equation as:
+where <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/d5678db6a0e35236c7037b64736ccf19.svg?invert_in_darkmode" align=middle width=103.26822pt height=24.56553pt/> and <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/066ab7381e7d650225f1730bd6a691a7.svg?invert_in_darkmode" align=middle width=95.777715pt height=24.56553pt/> are the corresponding cumulative distribution functions (CDFs) for <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/3ee98a0ddf705fc4e453f42e3e2563c6.svg?invert_in_darkmode" align=middle width=13.727175pt height=22.38192pt/> and <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/21fd4e8eecd6bdf1a4d3d6bd1fb8d733.svg?invert_in_darkmode" align=middle width=8.4843pt height=22.38192pt/>, that is: <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/002d1c8d6f7bd6452b21706524c5b673.svg?invert_in_darkmode" align=middle width=163.540245pt height=28.2282pt/>, <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/88ba2440e8b83e1f8a6db6af4599ea63.svg?invert_in_darkmode" align=middle width=149.80515pt height=28.2282pt/>. For continuous positive PDFs <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/88fbd05154e7d6a65883f20e1b18a817.svg?invert_in_darkmode" align=middle width=13.727175pt height=22.38192pt/> and <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/21fd4e8eecd6bdf1a4d3d6bd1fb8d733.svg?invert_in_darkmode" align=middle width=8.4843pt height=22.38192pt/>, <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/190083ef7a1625fbc75f243cffb9c96d.svg?invert_in_darkmode" align=middle width=9.780705pt height=22.74591pt/> is a continuous and monotonically increasing function. If <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/190083ef7a1625fbc75f243cffb9c96d.svg?invert_in_darkmode" align=middle width=9.780705pt height=22.74591pt/> is differentiable, we can rewrite the above equation as:
 
-$$
-I_0(x) = f^{\prime}(x) I(f(x)).
-$$
+<p align="center"><img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/2a2097abc9026c829b64577c4de06970.svg?invert_in_darkmode" align=middle width=152.698425pt height=17.250255pt/></p>
 
 ###### Inverse Transform
 
-The Inverse-CDT of $\hat{I}$ is defined as:
-$$
-I(y) = \frac{d }{dy}J_0(f_1^{-1}(y)) = (f^{-1})^{\prime} I_0(f^{-1}(y))
-$$
+The Inverse-CDT of <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/bb1509c53ed9e94118cb98cd9436ad7f.svg?invert_in_darkmode" align=middle width=10.163505pt height=31.0563pt/> is defined as:
+<p align="center"><img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/bfd87e6c1d920e5baa94174831278a70.svg?invert_in_darkmode" align=middle width=293.6109pt height=36.953895pt/></p>
 
-where $f^{-1}: Y \to X$ refers to the inverse of $f$ (i.e. $f^{-1}(f(x)) = x$), and where $f(x) =  {\hat{I}_1(x)}/{\sqrt{I_0(x)}} + x$. The equation above holds for points where $J_0$ and $f$ are differentiable. By the construction above, $f$ will be differentiable except for points where $I_0$ and $I_1$ are discontinuous. Now we are ready to delve into some exciting applications of CDT.
+where <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/86035f674998337e99cf3bd753ab438f.svg?invert_in_darkmode" align=middle width=94.64004pt height=26.70657pt/> refers to the inverse of <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/190083ef7a1625fbc75f243cffb9c96d.svg?invert_in_darkmode" align=middle width=9.780705pt height=22.74591pt/> (i.e. <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/37634a69c6e56ca1ec7efe3f61465c07.svg?invert_in_darkmode" align=middle width=103.288185pt height=26.70657pt/>), and where <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/db2e04fa41ca5d29f4ff03898514dda5.svg?invert_in_darkmode" align=middle width=181.347045pt height=31.0563pt/>. The equation above holds for points where <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/33799619e6a8adb0933941909e268d50.svg?invert_in_darkmode" align=middle width=15.60933pt height=22.38192pt/> and <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/190083ef7a1625fbc75f243cffb9c96d.svg?invert_in_darkmode" align=middle width=9.780705pt height=22.74591pt/> are differentiable. By the construction above, <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/190083ef7a1625fbc75f243cffb9c96d.svg?invert_in_darkmode" align=middle width=9.780705pt height=22.74591pt/> will be differentiable except for points where <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/88fbd05154e7d6a65883f20e1b18a817.svg?invert_in_darkmode" align=middle width=13.727175pt height=22.38192pt/> and <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/d906cd9791e4b48a3b848558acda5899.svg?invert_in_darkmode" align=middle width=13.727175pt height=22.38192pt/> are discontinuous. Now we are ready to delve into some exciting applications of CDT.
 
 
 ### Radon Transform
 
-The classic Radon transform, $\mathcal{R}$, maps a function  $I\in L^1(\mathbb{R}^d)$ where $L^1(\mathbb{R}^d):=\{ I:\mathbb{R}^d \rightarrow \mathbb{R} | \int_{\mathbb{R}^d} |I(x)|dx \leq \infty\}$ to the infinite set of its integrals over the hyperplanes of $\mathbb{R}^d$ and is defined as,
-$$
-\mathcal{R} I(t,\theta):=\int_{\mathbb{R}^d}I(x)\delta(t-x\cdot\theta)dx,
-$$
+The classic Radon transform, <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/0ea3cec9cd8f8324b87218b762b9a686.svg?invert_in_darkmode" align=middle width=13.879635pt height=22.38192pt/>, maps a function  <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/f1ade1a142928a894aa5d160fa999a1d.svg?invert_in_darkmode" align=middle width=79.289595pt height=27.85299pt/> where <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/aee9e74580673a1b86cb705eb144212b.svg?invert_in_darkmode" align=middle width=302.188095pt height=27.85299pt/> to the infinite set of its integrals over the hyperplanes of <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/435f1061aa6f25938c3c3515c083d06c.svg?invert_in_darkmode" align=middle width=18.64533pt height=27.85299pt/> and is defined as,
+<p align="center"><img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/fd4f10308a1196420be12f4ad2f946f2.svg?invert_in_darkmode" align=middle width=239.75325pt height=37.35204pt/></p>
 
-where $\delta(.)$ is the one-dimensional Dirac delta function.
-For $\forall\theta\in \mathbb{S}^{d-1}$ where $\mathbb{S}^{d-1}$ is the unit sphere in $\mathbb{R}^{d}$, and $\forall t \in \mathbb{R}$. Note that $\mathcal{R}: L^1(\mathbb{R}^d)\rightarrow L^1(\mathbb{R}\times \mathbb{S}^{d-1})$ in other words the d-dimensional density $I$ is projected into an infinite set of one-dimensional densities, $\mathcal{R}I(\cdot,\theta)$. The figure below visualizes the Radon transform for a 2D Gaussian density.
+where <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/f4793050b7ef4719465234bb92574613.svg?invert_in_darkmode" align=middle width=25.18758pt height=24.56553pt/> is the one-dimensional Dirac delta function.
+For <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/12a67427b33187974d4d8bfde354df04.svg?invert_in_darkmode" align=middle width=69.97287pt height=27.85299pt/> where <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/6406ab477521e17d339e0878746756d7.svg?invert_in_darkmode" align=middle width=32.67957pt height=27.85299pt/> is the unit sphere in <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/1a7104381f6205cca28decaf37d42180.svg?invert_in_darkmode" align=middle width=18.64533pt height=27.85299pt/>, and <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/bc2c22455f069a210505b17f5569628a.svg?invert_in_darkmode" align=middle width=46.89036pt height=22.74591pt/>. Note that <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/5ad8f762edd6de77299fd51a51b5931c.svg?invert_in_darkmode" align=middle width=200.539845pt height=27.85299pt/> in other words the d-dimensional density <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/21fd4e8eecd6bdf1a4d3d6bd1fb8d733.svg?invert_in_darkmode" align=middle width=8.4843pt height=22.38192pt/> is projected into an infinite set of one-dimensional densities, <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/3399c52a5d172ff8ac15b73b689363b8.svg?invert_in_darkmode" align=middle width=55.08888pt height=24.56553pt/>. The figure below visualizes the Radon transform for a 2D Gaussian density.
 
-![$I_i$s and their corresponding CDT](Figures/figure1.png)
+![<img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/45de514e4bd2f5ba36f09fff6b549760.svg?invert_in_darkmode" align=middle width=11.832645pt height=22.38192pt/>s and their corresponding CDT](Figures/figure1.png)
 
-Using the Slice Fourier theorem it can be easily shown that the Radon transform is invertible. The inverse of the Radon transform denoted by $\mathcal{R}^{-1}$ is defined as:
-$$
-I(x)=\mathcal{R}^{-1}(\mathcal{R}I(t,\theta))= \int_{\mathbb{S}^{d-1}}\int_{\mathbb{R}} (\mathcal{R}I(t,\theta)*h(t))\delta(t-x\cdot\theta)dtd\theta
-$$
-where $h(.)$ is a one-dimensional high-pass filter with corresponding Fourier transform $\mathcal{F}h(\omega)\approx c|\omega|^{d-1}$ (it appears due to the change of coordinates from spherical to Cartesian in the Fourier Slice theorem) and `$*$' denotes convolution. The above definition of the inverse Radon transform is also known as the filtered back-projection method, which is extensively used in image reconstruction in the biomedical imaging community. Intuitively each one-dimensional projection/slice, $\mathcal{R}I(\cdot,\theta)$, is first filtered via a high-pass filter and then smeared back into $\mathbb{R}^{d}$ along the integration hyperplanes, $x\cdot\theta=t$, to approximate $I$. The summation of all smeared approximations then reconstruct $I$. Finally, we note that Radon transform is
+Using the Slice Fourier theorem it can be easily shown that the Radon transform is invertible. The inverse of the Radon transform denoted by <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/0d07777bf454d9f941c8facaea255a08.svg?invert_in_darkmode" align=middle width=30.643305pt height=26.70657pt/> is defined as:
+<p align="center"><img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/faf70e715418eacd4c2142bd5dba79e4.svg?invert_in_darkmode" align=middle width=453.62955pt height=37.35204pt/></p>
+where <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/97d6b6abab7046031f875d5a2388a7fd.svg?invert_in_darkmode" align=middle width=26.722575pt height=24.56553pt/> is a one-dimensional high-pass filter with corresponding Fourier transform <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/0bdfe8bd3cb6b25542d577159dc3de62.svg?invert_in_darkmode" align=middle width=118.780695pt height=27.85299pt/> (it appears due to the change of coordinates from spherical to Cartesian in the Fourier Slice theorem) and `<img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/7c74eeb32158ff7c4f67d191b95450fb.svg?invert_in_darkmode" align=middle width=8.188554pt height=15.23973pt/>' denotes convolution. The above definition of the inverse Radon transform is also known as the filtered back-projection method, which is extensively used in image reconstruction in the biomedical imaging community. Intuitively each one-dimensional projection/slice, <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/3399c52a5d172ff8ac15b73b689363b8.svg?invert_in_darkmode" align=middle width=55.08888pt height=24.56553pt/>, is first filtered via a high-pass filter and then smeared back into <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/1a7104381f6205cca28decaf37d42180.svg?invert_in_darkmode" align=middle width=18.64533pt height=27.85299pt/> along the integration hyperplanes, <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/ed7a4a2f4460dd0f7144c5861908c90d.svg?invert_in_darkmode" align=middle width=57.143295pt height=22.74591pt/>, to approximate <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/21fd4e8eecd6bdf1a4d3d6bd1fb8d733.svg?invert_in_darkmode" align=middle width=8.4843pt height=22.38192pt/>. The summation of all smeared approximations then reconstruct <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/21fd4e8eecd6bdf1a4d3d6bd1fb8d733.svg?invert_in_darkmode" align=middle width=8.4843pt height=22.38192pt/>. Finally, we note that Radon transform is
 a linear transformation.
 
 ### Radon-CDT
 
-The idea behind Radon-CDT is to first slice a d-dimensional probability density $I$ into a set of one-dimensional distributions and then apply CDT to the one dimensional distributions. Formally, given a template distribution $I_0$ the Radon-CDT is defined as:
+The idea behind Radon-CDT is to first slice a d-dimensional probability density <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/21fd4e8eecd6bdf1a4d3d6bd1fb8d733.svg?invert_in_darkmode" align=middle width=8.4843pt height=22.38192pt/> into a set of one-dimensional distributions and then apply CDT to the one dimensional distributions. Formally, given a template distribution <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/88fbd05154e7d6a65883f20e1b18a817.svg?invert_in_darkmode" align=middle width=13.727175pt height=22.38192pt/> the Radon-CDT is defined as:
 
-$$
-\hat{I}(t,\theta)=\text{CDT}_{\mathcal{R}I_0}(\mathcal{R}I(\cdot,\theta))= (f(t,\theta)-t)\sqrt{\mathcal{R}I_0(t,\theta)}
-$$
+<p align="center"><img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/1358cabdf0d481c1d3136e0f96ae0d66.svg?invert_in_darkmode" align=middle width=376.5597pt height=19.668165pt/></p>
 
-where $f(t,\theta)$ satisfies:
+where <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/fb6b76d3323483946ea0f3a86521b152.svg?invert_in_darkmode" align=middle width=43.87251pt height=24.56553pt/> satisfies:
 
-$$
-\int_{-\infty}^{f(t,\theta)}\mathcal{R}I(\tau,\theta)d\tau=\int_{-\infty}^{t}\mathcal{R}I_0(\tau,\theta)d\tau,~ \forall \theta\in \mathbb{S}^{d-1}
-$$
+<p align="center"><img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/4ceae8eec7ac325cd73b832d1af6bf22.svg?invert_in_darkmode" align=middle width=351.69585pt height=43.25079pt/></p>
 
 and the inverse transform is defined as:
 
-$$
-I(x)=\mathcal{R}^{-1}\left(\frac{\partial f(t,\theta)}{\partial t}\mathcal{R}I_0(f(t,\theta),\theta)\right)
-$$
+<p align="center"><img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/43d06e17c85890d79a4e36e81fab8328.svg?invert_in_darkmode" align=middle width=268.9797pt height=39.30498pt/></p>
 
-where $f(t,\theta)$ can be calculated from $\hat{I}$ and $I_0$ as  $f(t,\theta)=\frac{\hat{I}(t,\theta)}{\sqrt{\mathcal{R}I_0(t,\theta)}}+t$.
+where <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/fb6b76d3323483946ea0f3a86521b152.svg?invert_in_darkmode" align=middle width=43.87251pt height=24.56553pt/> can be calculated from <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/bb1509c53ed9e94118cb98cd9436ad7f.svg?invert_in_darkmode" align=middle width=10.163505pt height=31.0563pt/> and <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/88fbd05154e7d6a65883f20e1b18a817.svg?invert_in_darkmode" align=middle width=13.727175pt height=22.38192pt/> as  <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/088d8e2edfd62b3a9c94103b7752332b.svg?invert_in_darkmode" align=middle width=158.633145pt height=37.68435pt/>.
 
 ## Radon-CDT Demo
 
-Throughout the experiments in this tutorial we assume that $\mathcal{R}I_0(\cdot,\theta)$ is a uniform one-dimensional distribution. Lets start by showing the nonlinear nature of Radon-CDT.
+Throughout the experiments in this tutorial we assume that <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/b8869cc6e30ce71a54d899877ae2d165.svg?invert_in_darkmode" align=middle width=61.17342pt height=24.56553pt/> is a uniform one-dimensional distribution. Lets start by showing the nonlinear nature of Radon-CDT.
 
 ### Nonlinearity
 
-Let $I_1$ and $I_2$ be the following two images:
+Let <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/d906cd9791e4b48a3b848558acda5899.svg?invert_in_darkmode" align=middle width=13.727175pt height=22.38192pt/> and <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/9eff113852463b85a970d2d65d52280c.svg?invert_in_darkmode" align=middle width=13.727175pt height=22.38192pt/> be the following two images:
 
 ![](Figures/I0.bmp) ![](Figures/I1.bmp)
 
-where the images are normalized (sum to one) to be considered as two-dimensional probability distributions. Let $\hat{I}_i$ denote the corresponding Radon-CDTs. We use the following code to calculate the Radon transform and the Radon-CDT of these images (i.e. distributions).
+where the images are normalized (sum to one) to be considered as two-dimensional probability distributions. Let <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/a10ff06f53725bca54c49936f91f5fa5.svg?invert_in_darkmode" align=middle width=11.832645pt height=31.0563pt/> denote the corresponding Radon-CDTs. We use the following code to calculate the Radon transform and the Radon-CDT of these images (i.e. distributions).
 
 ```python
 import numpy as np
@@ -134,9 +114,9 @@ for i in range(2):
 ```
 which results in,
 
-![$I_i$s and their corresponding Radon-CDT](Figures/figure2.png)
+![<img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/45de514e4bd2f5ba36f09fff6b549760.svg?invert_in_darkmode" align=middle width=11.832645pt height=22.38192pt/>s and their corresponding Radon-CDT](Figures/figure2.png)
 
-Now to demonstrate the nonlinear nature of Radon-CDT, we choose the simplest linear operator, which is averaging the two distributions. We average the signals in the signal space, $I_3=0.5(I_1+I_2)$, in the Radon space $I_4=\mathcal{R}^{-1} (0.5(\mathcal{R}I_1+\mathcal{R}I_2))$, and in the Radon-CDT space, $I_5=\text{iRCDT}(0.5(\hat{I}_1+\hat{I}_2))$, and compare the results below.
+Now to demonstrate the nonlinear nature of Radon-CDT, we choose the simplest linear operator, which is averaging the two distributions. We average the signals in the signal space, <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/8a44d333fd9307aaca485044a927c088.svg?invert_in_darkmode" align=middle width=119.29764pt height=24.56553pt/>, in the Radon space <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/defdb60623c584a375721b4996b31a26.svg?invert_in_darkmode" align=middle width=191.322945pt height=26.70657pt/>, and in the Radon-CDT space, <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/5e257929229ad4fbc8fd8107a6cb33e4.svg?invert_in_darkmode" align=middle width=184.600845pt height=31.0563pt/>, and compare the results below.
 
 ```python
 I3=np.asarray(I).mean(axis=0)
@@ -153,7 +133,7 @@ It can be clearly seen that Radon-CDT provides a nonlinear averaging for these s
 
 Park et al. (2) showed that CDT can turn certain not linearly separable classes of one-dimensional signals into linearly separable ones. Kolouri et al. (1) extended the CDT results to higher dimensional densities and showed that the same characteristics hold for Radon-CDT.
 
-Here we run a toy example to demonstrate this characteristic. We start by defining three classes of two-dimensional images, where Class $k$, for $k\in\{1,2,3\}$, consists of translated versions of a $k$-modal Gaussian distribution. Here we generate these signal classes and their corresponding Radon-CDTs.
+Here we run a toy example to demonstrate this characteristic. We start by defining three classes of two-dimensional images, where Class <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/63bb9849783d01d91403bc9a5fea12a2.svg?invert_in_darkmode" align=middle width=9.041505pt height=22.74591pt/>, for <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/1cc5019c20e25f4af278b10609f0574a.svg?invert_in_darkmode" align=middle width=84.613815pt height=24.56553pt/>, consists of translated versions of a <img src="https://rawgit.com/skolouri/Radon-Cumulative-Distribution-Transform/master/None/svgs/63bb9849783d01d91403bc9a5fea12a2.svg?invert_in_darkmode" align=middle width=9.041505pt height=22.74591pt/>-modal Gaussian distribution. Here we generate these signal classes and their corresponding Radon-CDTs.
 
 ```python
 N=1000
