@@ -11,7 +11,7 @@ is a nonlinear and invertible transformation for non-negative d-dimensional sign
 
 and it extends CDT to d-dimensional probability distributions.  Similar to CDT, Radon-CDT also rises from the rich mathematical foundations of optimal mass transportation and combines it with integral geometry and Radon transform. Unlike the current data extensive nonlinear models, including deep neural networks and their variations, Radon-CDT provides a well-defined invertible nonlinear transformation that could be used alongside linear modeling techniques, including principal component analysis, linear discriminant analysis, and support vector machines (SVM), and does not require extensive training data.
 
- The corresponding iPython Notebook file for this post could be find [here](https://github.com/skolouri/Radon-Cumulative-Distribution-Transform/blob/master/Radon_CDT_Demo.ipynb). The demo is tested with:
+ The corresponding iPython Notebook file for this post could be found [here](https://github.com/skolouri/Radon-Cumulative-Distribution-Transform/blob/master/Radon-CDT_Demo.ipynb). The demo is tested with:
 
 1. numpy '1.13.1'
 2. sklearn '0.18.1'
