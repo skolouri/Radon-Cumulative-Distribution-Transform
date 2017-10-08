@@ -5,7 +5,7 @@ Radon Cumulative distribution transform (Radon-CDT) as described in:
 
 [(1) Kolouri S, Park SR, Rohde GK. The Radon cumulative distribution transform and its application to image classification. IEEE transactions on image processing. 2016 Feb;25(2):920-34.](http://ieeexplore.ieee.org/abstract/document/7358128/)
 
-is a nonlinear and invertible transformation for non-negative d-dimensional signals that guarantees certain linear separation theorems. The transformation builds on top of the Cumulative Distributed Transformation (CDT) described in:
+is a nonlinear and invertible transformation for non-negative d-dimensional signals that guarantees certain linear separation theorems. The transformation builds on top of the Cumulative Distribution Transformation (CDT) described in:
 
 [(2) Park SR, Kolouri S, Kundu S, Rohde GK. The cumulative distribution transform and linear pattern classification. Applied and Computational Harmonic Analysis. 2017 Feb 22.](http://www.sciencedirect.com/science/article/pii/S1063520317300076)
 
